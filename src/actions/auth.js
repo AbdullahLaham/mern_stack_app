@@ -14,7 +14,7 @@ export const signIn = (formData, navigate) => async (dispatch) => {
     }
 }
 export const signUp = (formData, navigate) => async (dispatch) => {
-    console.log('signup')
+    console.log('signup');
     try {
         const { data } = await api.signUp(formData);
         localStorage.setItem('profile', JSON.stringify(data))

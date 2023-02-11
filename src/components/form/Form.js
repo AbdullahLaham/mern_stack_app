@@ -14,7 +14,7 @@ const Form = ({setCurrentId, currentId}) => {
   
   useEffect(() => {
     if (post) {
-      setPostData(post)
+      setPostData(post);
     }
   }, [currentId])
   const [postData, setPostData] = useState({
@@ -42,7 +42,8 @@ const Form = ({setCurrentId, currentId}) => {
     message: '',
     tags: "",
     selectedFile: '',
-  })
+  });
+  
   }
   if (!user?.result?.name) {
     return (

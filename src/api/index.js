@@ -9,7 +9,8 @@ API.interceptors.request.use((req) => {
       req.headers.theId = JSON.parse(localStorage.getItem('profile')).result?._id;
    }
    return req;
-})
+});
+
 export const getPosts = async (page) => {
    const res = await API.get(`/posts?page=${page}`);
    return res;
@@ -32,3 +33,4 @@ export const likePost = (id) => API.patch(`/posts/${id}/likePost`)
 
 export const signIn = (formData) => API.post('/users/signin', formData);
 export const signUp = (formData) => API.post('/users/signup', formData);
+
